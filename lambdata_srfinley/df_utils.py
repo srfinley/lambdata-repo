@@ -37,3 +37,14 @@ def add_column(df, ls, name):
     df2 = df.copy()
     df2[name] = pd.Series(ls)
     return df2
+
+
+class WrappedDF:
+    def __init__(self, df):
+        self.df = df
+
+    def get_height(self):
+        return self.df.shape[0]
+
+    def get_width(self):
+        return self.df.shape[1]
