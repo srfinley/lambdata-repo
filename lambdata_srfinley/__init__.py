@@ -8,4 +8,5 @@ import numpy as np
 
 # sample function
 def increment(x):
+    """increments input by one"""
     return x+1
